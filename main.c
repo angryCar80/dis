@@ -1,3 +1,4 @@
+#include "include.h"
 #include <dirent.h>
 #include <stdio.h>
 #include <string.h>
@@ -15,12 +16,12 @@ int main(int argc, char *argv[]) {
             printf("%s\n", en->d_name);
           }
           closedir(dr);
-        }
-        if (strcmp("costume", argv[2]) == 0) {
-
         } else {
-          printf("Could not open directory\n");
+          printf("%sCould Open The directory\n%s", RED, WHT);
         }
+      } else if (strcmp("custome", argv[2]) == 0) {
+        printf("%s === Config ===%s\n", GRN, WHT);
+        printf("Still Working on this\n");
       }
     } else {
       printf("You Should Try --show all|custome\nfor more information try "
